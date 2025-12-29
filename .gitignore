@@ -17,3 +17,5 @@ old-test-results/
 *.mp4
 *.txt
 chrome-profile/
+recorder-waste/
+*waste*/

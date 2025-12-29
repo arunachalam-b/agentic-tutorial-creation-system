@@ -1,0 +1,48 @@
+{
+  "goal": "Create a Google Form to collect contact details (name, email, and mobile number)",
+  "prerequisites": ["User must be logged into Google"],
+  "steps": [
+    {
+      "id": "step_1",
+      "description": "Open Google Forms",
+      "expected_ui": "Google Forms homepage with template gallery",
+      "timestamp": 1767030919676
+    },
+    {
+      "id": "step_2",
+      "description": "Click on 'Blank' to create a new form",
+      "expected_ui": "Untitled form editor",
+      "timestamp": 1767030929699
+    },
+    {
+      "id": "step_3",
+      "description": "Set form title to 'Contact Details Collection' and add a description",
+      "expected_ui": "Form with title 'Contact Details Collection'",
+      "timestamp": 1767030988286
+    },
+    {
+      "id": "step_4",
+      "description": "Configure the first question for 'Name' as a short answer text field",
+      "expected_ui": "First question field labeled 'Name' with text input type",
+      "timestamp": 1767031033449
+    },
+    {
+      "id": "step_5",
+      "description": "Add second question for 'Email' as a short answer field and set validation to email format",
+      "expected_ui": "Second question field labeled 'Email' with email validation",
+      "timestamp": 1767031064987
+    },
+    {
+      "id": "step_6",
+      "description": "Add third question for 'Mobile Number' as a short answer field",
+      "expected_ui": "Third question field labeled 'Mobile Number'",
+      "timestamp": 1767031147092
+    },
+    {
+      "id": "step_7",
+      "description": "Preview the form to verify all fields are correct",
+      "expected_ui": "Form preview showing all three questions",
+      "timestamp": 1767031196410
+    }
+  ]
+}
