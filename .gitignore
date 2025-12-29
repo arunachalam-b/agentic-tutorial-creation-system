@@ -6,5 +6,12 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/.playwright-user-data/
 
 venv/
+old-test-results/
+
+*.mp3
+*.webm
+*.mp4
+*.txt
