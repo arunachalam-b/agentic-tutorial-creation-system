@@ -2,14 +2,11 @@ import edge_tts
 import asyncio
 
 sentences = [
-    ("Navigate to Google Forms website", "audio_01.mp3"),
-    ("Click Blank form", "audio_02.mp3"),
-    ("Click form title and type Contact Details Form", "audio_03.mp3"),
-    ("Type Name as first question", "audio_04.mp3"),
-    ("Click Add question and type Email", "audio_05.mp3"),
-    ("Click Add question and type Mobile Number", "audio_06.mp3"),
-    ("Add description, type digits only", "audio_07.mp3"),
-    ("Form completed", "audio_08.mp3")
+    ("First, let's go to Google Forms and create a new blank form to collect contact details.", "audio_01.mp3"),
+    ("Now I'll add the first question for collecting the user's name.", "audio_02.mp3"),
+    ("Next, I'll add a question to collect the user's email address.", "audio_03.mp3"),
+    ("Then I'll add a question for collecting the mobile number.", "audio_04.mp3"),
+    ("Finally, let's preview our form to make sure everything looks correct.", "audio_05.mp3")
 ]
 
 async def generate_audio(text, filename):
