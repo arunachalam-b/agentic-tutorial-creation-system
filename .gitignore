@@ -7,6 +7,7 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 /.playwright-user-data/
+auth.json
 
 venv/
 old-test-results/
@@ -15,3 +16,4 @@ old-test-results/
 *.webm
 *.mp4
 *.txt
+chrome-profile/

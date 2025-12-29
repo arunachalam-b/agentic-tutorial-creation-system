@@ -33,6 +33,8 @@ export default defineConfig({
     /* Record video of test execution */
     video: 'on',
     headless: false,
+    /* Use stored authentication state to keep user logged in */
+    // storageState: 'auth.json',
   },
 
   /* Configure projects for major browsers */

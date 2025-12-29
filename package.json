@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "save-auth": "tsx scripts/save-auth.ts",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
