@@ -1,6 +1,6 @@
 window.addEventListener(
   "click",
-  (e) => {
+  async (e) => {
     for (let i = 0; i < 3; i++) {
       const pulse = document.createElement("div");
       Object.assign(pulse.style, {
@@ -24,6 +24,7 @@ window.addEventListener(
         pulse.style.opacity = "0";
       });
       setTimeout(() => pulse.remove(), 600 + (i * 150));
+      await new Promise((resolve) => setTimeout(resolve, 150));
     }
   },
   true
