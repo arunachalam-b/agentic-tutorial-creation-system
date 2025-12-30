@@ -1,6 +1,6 @@
 This repo has been created primarily for agentic tutorial creation using playwright MCP. The agent has to get the instruction from the user. We need 1 root agent, and 4 subagents for this process. Each of those subagents should run one after the other. No parallel execution is needed. 
 
-The root agent monitor and manage all the actions by the subagents. The additional work of root agent is to maintain a log. It should create a log file inside `logs/` folder with the name `log-run-2025-12-29-10-50-PM.txt` (log-run-{date}-{time}.txt) and write every log inside that file. Every action should be logged including but not limited to, starting/completed planning, recording agent spin up, playwright started, started recording step 1, completed step 1, generating audio, finding timestamp diff, merging audio with video, etc. The timestamp at the time of AFTER PERFORMING THAT ACTION should be recorded in each line. It should be comprehensive that if a user wants to debug anything, it should be enough for him to look at the log file. Every action, every trigger, every event that is completed should be logged. 
+The root agent monitor and manage all the actions by the subagents. 
 
 The planner subagent should think about the steps to do to achieve this. It should come up with a JSON describing the list of steps to do in video (similar to the one below). Write that to `PLAN.json` file in the project root. 
 
