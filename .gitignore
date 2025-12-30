@@ -16,6 +16,8 @@ old-test-results/
 *.webm
 *.mp4
 *.txt
+*.log
+
 chrome-profile/
 recorder-waste/
 *waste*/
