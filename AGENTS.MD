@@ -7,17 +7,14 @@ The planner subagent should think about the steps to do to achieve this. It shou
 ```json
 {
   "goal": "Create and publish a Google Form",
-  "prerequisites": ["User must be logged into Google"],
   "steps": [
     {
       "id": "step_1",
       "description": "Open Google Forms",
-      "expected_ui": "Google Forms homepage"
     },
     {
       "id": "step_2",
       "description": "Create a blank form",
-      "expected_ui": "Untitled form editor"
     }
   ]
 }
