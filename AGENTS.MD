@@ -39,6 +39,15 @@ sentences = [
 ]
 ```
 
-The next (composer) subagent should pick the video file and all the generated audio files and merge them together. Remember each step in `PATH.json` will contain the timestamp that the step was started. So you should find difference in timestamps between current and previous step, and each audio should be placed at their respective timing gap while attaching to the video file. The audio files has to be merged in a way that the respective audio should be placed at the respective section of the video. The actions in the video and audio should be in sync. The timestamp difference calculation will ensure that. The subagent can use the `ffmpeg` tool, which is already installed in this machine. 
+The next (composer) subagent should pick the video file and all the generated audio files and merge them together. Remember each step in `PATH.json` will contain the timestamp that the step was started. So you should find difference in timestamps between current and previous step, and each audio should be placed at their respective timing gap while attaching to the video file. The audio files has to be merged in a way that the respective audio should be placed at the respective section of the video. The actions in the video and audio should be in sync. The timestamp difference calculation will ensure that. The subagent can use the `ffmpeg` tool, which is already installed in this machine. Here's an example command. 
+
+```bash
+ffmpeg -y -i google-form-tutorial.webm \
+  -i generate-audio/step_1.mp3 -i generate-audio/step_2.mp3 -i generate-audio/step_3.mp3 \
+  -i generate-audio/step_4.mp3 -i generate-audio/step_5.mp3 -i generate-audio/step_6.mp3 \
+  -i generate-audio/step_7.mp3 \
+  -filter_complex "[1:a]adelay=0|0[audio1];[2:a]adelay=10023|10023[audio2];[3:a]adelay=68610|68610[audio3];[4:a]adelay=113773|113773[audio4];[5:a]adelay=145311|145311[audio5];[6:a]adelay=227416|227416[audio6];[7:a]adelay=276734|276734[audio7];[audio1][audio2][audio3][audio4][audio5][audio6][audio7]amix=inputs=7:duration=first[audioout]" \
+  -map 0:v -map "[audioout]" -c:v libx264 -preset ultrafast -crf 23 -c:a aac -b:a 192k final-output/final_recording.mp4 2>&1 | tail -20
+```
 
 After the above steps are done, the root agent should change the file name to `final_recording.mp4` and place it inside `final-output` folder. 
