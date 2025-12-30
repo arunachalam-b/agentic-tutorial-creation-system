@@ -1,48 +1,48 @@
 {
-  "goal": "Create a Google Form to collect contact details (name, email, and mobile number)",
+  "goal": "Create and publish a contact details collection Google Form",
   "prerequisites": ["User must be logged into Google"],
   "steps": [
     {
       "id": "step_1",
-      "description": "Open Google Forms",
-      "expected_ui": "Google Forms homepage with template gallery",
-      "timestamp": 1767093702042
+      "description": "Navigate to Google Forms",
+      "expected_ui": "Google Forms homepage",
+      "timestamp": 1767096174865
     },
     {
       "id": "step_2",
-      "description": "Click on 'Blank' to create a new form",
+      "description": "Create a blank form",
       "expected_ui": "Untitled form editor",
-      "timestamp": 1767093717348
+      "timestamp": 1767096201849
     },
     {
       "id": "step_3",
-      "description": "Set form title to 'Contact Details Collection' and add a description",
-      "expected_ui": "Form with title 'Contact Details Collection'",
-      "timestamp": 1767093739439
+      "description": "Set form title to 'Contact Details' and description",
+      "expected_ui": "Form with updated title",
+      "timestamp": 1767096210006
     },
     {
       "id": "step_4",
-      "description": "Configure the first question for 'Name' as a short answer text field",
-      "expected_ui": "First question field labeled 'Name' with text input type",
-      "timestamp": 1767093759611
+      "description": "Add name question (short answer)",
+      "expected_ui": "Name question added",
+      "timestamp": 1767096243406
     },
     {
       "id": "step_5",
-      "description": "Add second question for 'Email' as a short answer field and set validation to email format",
-      "expected_ui": "Second question field labeled 'Email' with email validation",
-      "timestamp": 1767093777735
+      "description": "Add email question (short answer with validation)",
+      "expected_ui": "Email question added",
+      "timestamp": 1767096267880
     },
     {
       "id": "step_6",
-      "description": "Add third question for 'Mobile Number' as a short answer field",
-      "expected_ui": "Third question field labeled 'Mobile Number'",
-      "timestamp": 1767093833984
+      "description": "Add mobile number question (short answer with number validation)",
+      "expected_ui": "Mobile number question added",
+      "timestamp": 1767096365560
     },
     {
       "id": "step_7",
-      "description": "Preview the form to verify all fields are correct",
-      "expected_ui": "Form preview showing all three questions",
-      "timestamp": 1767093881623
+      "description": "Publish the form",
+      "expected_ui": "Form published with share link",
+      "timestamp": 1767096447886
     }
   ]
 }
