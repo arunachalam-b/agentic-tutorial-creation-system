@@ -1,4 +1,4 @@
-# Record Automation
+# Agentic Tutorial Creation System
 
 An agentic tutorial creation system that automatically generates video tutorials with synchronized voice narration using Playwright MCP and AI-powered text-to-speech.
 
