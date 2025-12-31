@@ -29,6 +29,60 @@ The system uses a multi-agent architecture:
 - Python 3.x with virtual environment (`venv`)
 - FFmpeg (for video/audio composition)
 - Playwright MCP server
+- OpenCode CLI
+
+## First-Time Setup
+
+Before using this project, complete the following one-time setup steps:
+
+### 1. Configure Playwright MCP for OpenCode
+
+Add the Playwright MCP server to your OpenCode configuration. Open (or create) the config file at `~/.config/opencode/opencode.json` and add the following:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest",
+        "--user-data-dir=/home/<your_user_name>/opencode-playwright-storage/",
+        "--save-video=1024x768",
+        "--output-dir=/home/<your_user_name>/Projects/record-automation/recordings/"
+      ],
+      "enabled": true
+    }
+  }
+}
+```
+
+> **Note:** Adjust the paths in `--user-data-dir` and `--output-dir` to match your environment if needed. You may also change the resolution of video capture using `--save-video` param. 
+
+### 2. Install the Click Feedback Extension
+
+The click feedback extension provides visual feedback during recordings. You need to install it in the Playwright browser:
+
+1. Start OpenCode and trigger the Playwright browser to open (e.g., ask the agent to navigate to any URL)
+2. Once the browser opens, navigate to `chrome://extensions/`
+3. Enable **Developer mode** using the toggle in the top-right corner
+4. Click **Load unpacked**
+5. Navigate to and select the `click-feedback-extension` folder in this project directory
+6. The extension should now appear in your extensions list and will be active for all recordings
+
+> **Important:** Since the extension is loaded in the Playwright user data directory, it will persist across sessions.
+
+### 3. Pre-authenticate for Protected Pages
+
+If your tutorial involves pages that require login (e.g., Google Forms, GitHub, etc.), you must authenticate beforehand:
+
+1. Start OpenCode and ask the agent to open the Playwright browser (e.g., "Open the browser and navigate to https://google.com")
+2. Manually log in to any services you'll need during recording
+3. Close the browser properly through the agent (e.g., "Close the browser")
+4. Your authentication cookies will be saved in the `--user-data-dir` location and persist for future sessions
+
+> **Tip:** You only need to do this once per service, as long as the session doesn't expire.
 
 ## Project Structure
 
