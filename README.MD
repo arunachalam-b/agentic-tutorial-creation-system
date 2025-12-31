@@ -92,8 +92,6 @@ record-automation/
 │   └── text_to_speech_edge.py    # TTS script for generating audio
 ├── recordings/                    # Auto-generated video recordings
 ├── final-output/                  # Final composed videos
-├── scripts/
-│   └── save-auth.ts              # Authentication helper
 ├── click-feedback-extension/      # Browser extension for click feedback
 ├── PLAN.json                      # Generated plan file
 ├── AGENTS.MD                      # Detailed agent instructions
